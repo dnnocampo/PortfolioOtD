@@ -24,3 +24,11 @@
 ### Problems
 + Not sure how to extract data from API to enter into R or visualisation
 + Alan showed how to enter into browser address and view as CSV but results are confusing and not sure how to read them
+
+### The Guardian API
++ Able to filter The Guardian API similar to NYT
++ UK perspective/comparison with American NYT
++ Issues:
+  + extracting data again
+  + Time
+  
