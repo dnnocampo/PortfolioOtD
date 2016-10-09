@@ -13,9 +13,9 @@ Covering the US presidential election in Western Europe: A cross-national compar
 
 Question
 How often are Trump and Clinton mentioned in the NY Times? Who is gaining more publicity and is that publicity negative or positive as Election Day comes closer?
-##### Method
+Method
 grep (-cn -e) keywords
 REGEX for patterns
 wget to obtain text
-##### Data Set
+Data Set
 NY Times API
