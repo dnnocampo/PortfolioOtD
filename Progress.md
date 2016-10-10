@@ -32,3 +32,26 @@
   + extracting data again
   + Time
   
+## October 10
+#### Donald Trump
++ q: Donald Trump
++ fq: subject.contains: (Presidential Election of 2016)
++ begin_date: 20160801
++ end_date: 20161001
++ fl: keywords,web_url
++ hl: true
+
+### Results
++ 1007 hits
+
+#### Hillary Clinton
++ q: Hillary Clinton
++ fq: subject.contains: (Presidential Election of 2016)
++ begin_date: 20160801
++ end_date: 20161001
++ fl: keywords,web_url
++ hl: true
+
+### Results
++ 823 hits
+
