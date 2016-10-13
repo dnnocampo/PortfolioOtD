@@ -55,3 +55,11 @@
 ### Results
 + 823 hits
 
+## Guardian Results (Oct 13)
++ + filtered through 'us-news' section and timeline
+
+#### Donald Trump
++ 553 results
+
+#### Hillary Clinton
++ 466 results
