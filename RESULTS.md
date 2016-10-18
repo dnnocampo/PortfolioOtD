@@ -56,3 +56,42 @@ This confirmed our belief that Trump would be making more headlines due to his c
 However, it did not reveal our originally hypothesis that coverage of either candidate would increase as Election Day nears, both candidates have similar frequencies near the end of the timeline. Perhaps this shows that rather than focusing on each candidate, news articles are rather focusing on the election as a whole and looking at the real policy issues and campaigns.
 Additionally, by including headlines and web urls in our CSV, we are able to refer to it when investigating the spikes in frequency. For example, Trump returned more than 40 results on Aug. 2. Our CSV shows that Trump had quite a busy time in the news during that time as he had casued rifts in the Republican party when he refused to endorse Paul Ryan and John McCain, was being criticized by Obama for his candidacy, and making controversial remarks about Korea, Russia, and Mexico.  
 On the other hand, Clinton's busiest day in NYT headlines was Sept. 27 the day of the first presidential debate. 
+
+## Guardian Results
+We wanted to see whether the high number of results would be similar looking at a non-US publication such as the UK's Guardian. Using as close to the parameters as we could (considering the APIs had different limits), we attempted to search for the frequency of mentions for both Trump and Clinton again on the Guardian.
+
+The results for Trump were **533** results and Clinton had **468** results. This was considerably lower compared to the US NYT as we suspected. Interestingly, while the NYT involved a mixture of news and tabloid, the Guardian rather focused on the effects of the US election on the UK and Europe. 
+
+We also found the Guardian API easier to navigate than the NYT API as it allowed us to return more than 10 results like the NYT, allowing us to speed up our data collection into a CSV and then to plot. Our searches appeared as:
+
+**http://content.guardianapis.com/search?section=us-news&from-date=2016-08-01&to-date=2016-10-01&order-by=oldest&page=3&page-size=200&q=Donald%20Trump&api-key=**
+
+AND
+
+**http://content.guardianapis.com/search?section=us-news&from-date=2016-08-01&to-date=2016-10-01&order-by=oldest&page=3&page-size=200&q=Hillary%20Clinton&api-key=**
+
+Our scripts to plot were the same as the NYT plots:
+
+**library(plyr)
+guardianHillary = read.csv("~/Desktop/ObjectsToData/guardianHillary1.csv");
+count(guardianHillary, "webPublicationDate")
+table(guardianHillary$webPublicationDate)
+plot(table(guardianHillary$webPublicationDate), 
+        xlab='Date', ylab='Number of mentions', main='Guardian: Hillary Clinton')**
+        
+AND
+
+**library(plyr)
+guardianTrump = read.csv("~/Desktop/ObjectsToData/guardianTrump1.csv");
+count(guardianTrump, "webPublicationDate")
+table(guardianTrump$webPublicationDate)
+plot(table(guardianTrump$webPublicationDate), 
+     xlab='Date', ylab='Number of mentions', main='Guardian: Donald Trump')**
+     
+
+![image](https://github.com/dnnocampo/PortfolioOtD/blob/master/guardiantrumpBAR.png)
+![image](https://github.com/dnnocampo/PortfolioOtD/blob/master/guardiantrumpLINE.png)
+![image](https://github.com/dnnocampo/PortfolioOtD/blob/master/guardianclintonBAR.png)
+![image](https://github.com/dnnocampo/PortfolioOtD/blob/master/hillaryguardianplotLINE.png)
+
+Our Guardian search was able to more closely fulfill our hypothesis. Nearing Election Day, the number of mentions for each candidate increases in the Guardian. The Guardian also had more substantial articles concerning the candidates. There is still a mixture of tabloid news such as the candidates responding to each other on social media after the first debate, however the headlines compiled in our CSV show news coverage involving party partisanship, voter choice, and op-eds.
