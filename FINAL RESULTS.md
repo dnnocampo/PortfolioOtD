@@ -52,6 +52,7 @@ To create the line graph we simply added the "type="l"" to the end of the script
 ![image](https://github.com/dnnocampo/PortfolioOtD/blob/master/NYTTrumpLINE.png)
 ![image](https://github.com/dnnocampo/PortfolioOtD/blob/master/NYTClintonBAR.png)
 ![image](https://github.com/dnnocampo/PortfolioOtD/blob/master/NYTClintonLINE.png)
+![image](https://github.com/dnnocampo/PortfolioOtD/blob/master/NYTresultscombined.png)
 
 Our "Trump" search returned **1291** results, while "Clinton" returned **757** results. 
 This confirmed our belief that Trump would be making more headlines due to his controversial campaign. 
@@ -95,6 +96,7 @@ plot(table(guardianTrump$webPublicationDate),
 ![image](https://github.com/dnnocampo/PortfolioOtD/blob/master/guardiantrumpLINE.png)
 ![image](https://github.com/dnnocampo/PortfolioOtD/blob/master/guardianclintonBAR.png)
 ![image](https://github.com/dnnocampo/PortfolioOtD/blob/master/hillaryguardianplotLINE.png)
+![image](https://github.com/dnnocampo/PortfolioOtD/blob/master/guardian%20combined.png)
 
 Our Guardian search was able to more closely fulfill our hypothesis. Nearing Election Day, the number of mentions for each candidate increases in the Guardian. The Guardian also had more substantial articles concerning the candidates. There is still a mixture of tabloid news such as the candidates responding to each other on social media after the first debate, however the headlines compiled in our CSV show news coverage involving party partisanship, voter choice, and op-eds.
 
