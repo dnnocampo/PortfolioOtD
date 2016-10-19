@@ -35,7 +35,7 @@ AND
 **http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=headline:%22Clinton%22&begin_date=20160801&end_date=20161001&sort=oldest&fl=headline,pub_date,web_url&hl=true&page=__**
 
 An issue we came across was that the NYT API only returned 10 results per page. Therefore we split up the process amongst the five of us to go through a set of pages. We took the data, put it through a json to CSV converter and compiled all the results into a CSV. 
-We then took the CSV, cleaned it up to line up all the publication dates, and put it through R Studio to plot the results. We originally produced a bar graph to show the number of articles published each day involving headlines with "Trump" or "Clinton", but also decided to produce a line graph to create an easier overview of the frequency over the two months. 
+We then took the CSV, cleaned it up to line up all the publication dates, and put it through R Studio to plot the results. We originally produced a bar graph to show the number of articles published each day involving headlines with "Trump" or "Clinton", but also decided to produce a line graph to create an easier overview of the frequency over the two months. To create these scripts we searched scripts online that would achieve our goal and altered them according to our needs such as altering it to create a line graph and reading the data on our CSV files.
 
 The scripts we produced are as follows: 
 
@@ -45,6 +45,18 @@ count(NYTtrump, "pub_date")
 table(NYTtrump$pub_date)
 plot(table(NYTtrump$pub_date), 
      xlab='Date', ylab='Number of mentions', main='NYT: Trump', type="l")**
+     
+**library(plyr)
+NYThillary = read.csv("~/Desktop/ObjectsToData/CSVhillary/trump1.csv");
+count(NYThillary, "pub_date")
+table(NYThillary$pub_date)
+plot(table(NYThillary$pub_date), 
+     xlab='Date', ylab='Number of mentions', main='NYT: Trump', type="l")**
+     
+**Combined plot**
+plot(table(NYTtrump$pub_date), type="l", col="red",
+     xlab='Date', ylab='Number of mentions', main='NYT Results: Trump (Red) and Clinton(Blue)')
+lines(table(NYTHillary$pub_date), type="l", col="blue")
      
 To create the line graph we simply added the "type="l"" to the end of the script.
 
@@ -90,6 +102,13 @@ count(guardianTrump, "webPublicationDate")
 table(guardianTrump$webPublicationDate)
 plot(table(guardianTrump$webPublicationDate), 
      xlab='Date', ylab='Number of mentions', main='Guardian: Donald Trump')**
+     
+**Combined plot**
+plot(table(guardianTrump$webPublicationDate), type="l", col="red",
+xlab='Date', ylab='Number of mentions', main='Guardian Results: Trump (Red) and Clinton (Blue)')
+lines(table(guardianHillary$webPublicationDate), type="l", col="blue") 
+
+
      
 
 ![image](https://github.com/dnnocampo/PortfolioOtD/blob/master/guardiantrumpBAR.png)
