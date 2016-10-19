@@ -1,6 +1,7 @@
 # Final Findings
 
-Martin Roger Ze Schneider, Lars Mangel, Dominique Brouwer, Cassandra Sijtsma, Dianne Ocampo
+Martin Roger Nkpwang Ze
+ Lars Mangel, Dominique Brouwer, Cassandra Sijtsma, Dianne Ocampo
 
 ###Group Proposal
 ####Question
