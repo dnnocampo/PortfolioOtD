@@ -3,7 +3,7 @@ Objects to Data Portfolio
 
 Included:
 + Initial individual proposal
-+ Final Results
++ Group Project Final Document
 + Personal Contribution
 + Supporting Documents
   + Images
