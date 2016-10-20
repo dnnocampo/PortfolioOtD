@@ -3,5 +3,8 @@ Objects to Data Portfolio
 
 Included:
 + Initial individual proposal
-+ Group proposal
-+ Experimenting with data scraping
++ Final Results
++ Personal Contribution
++ Supporting Documents
+  + Images
+  + CSVs
